@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import coverPhoto from '../../images/coverPhoto.jpg'
 import { TopicContext } from '../../layouts/Root';
 import TopicCard from '../TopicCard/TopicCard';
@@ -20,6 +21,10 @@ const Home = () => {
                     <div className='text-center mt-5 ml-3'>
                         <p className='text-gray-500 mb-5'>Unlock your dream with <span className='text-blue-700'>Quizzes Laboratory</span></p>
                         <p>It is an online quiz website. This website provide quizzes only for 'IT' students. There are several topics, you may choose any topic and also provide your performance instantly.</p>
+                        <div className="flex flex-wrap justify-center mt-11">
+                            <Link to='/topics'><button className="px-8 py-3 m-2 text-lg font-semibold rounded bg-violet-400 hover:bg-violet-600">Get started</button></Link>
+                            <Link to='/blog'><button className="px-8 py-3 m-2 text-lg border rounded bg-gray-500 hover:bg-gray-600 text-white">Learn more</button></Link>
+                        </div>
                     </div>
                 </div>
             </div>
