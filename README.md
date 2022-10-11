@@ -1,15 +1,14 @@
+
 # Quizzes Lab
 
 This is an online based educational project, Where anyone can take an participation for quiz test on several topics on web development.
 
-## Available Scripts
+## Some Feature of This Project
+* It is only for 'IT' department.
+* You can participate for free.
+* It is best for web developer.
+* You can take participate as much you want.
+* You can view your performance immediately.
+* You can see yor full ststistics.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Live Website Link: 
