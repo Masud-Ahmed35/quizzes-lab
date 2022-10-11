@@ -1,11 +1,29 @@
 import { EyeIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import React, { useState } from 'react';
 import OptionItem from '../OptionItem/OptionItem';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const Quiz = ({ quiz, index }) => {
     const { id, correctAnswer, question, options } = quiz;
     // console.log(quiz);
-
     const questionWithoutTag = question.replace(/(<([^>]+)>)/ig, '');
+
+    // const [selectedAnswer, setSelectedAnswer] = useState();
+    const handleCorrectAnswer = option => {
+        if (option === correctAnswer) {
+            // setSelectedAnswer(true);
+            console.log('Correct Answer');
+            toast.success('Your Answer is Correct', { autoClose: 1000 })
+        }
+        else {
+            // setSelectedAnswer(false);
+            console.log('Wrong Answer');
+            toast.error('Your Answer is Wrong', { autoClose: 1000 })
+        }
+    }
 
     return (
         <div className='m-10'>
@@ -30,6 +48,8 @@ const Quiz = ({ quiz, index }) => {
                     options.map((option, idx) => <OptionItem
                         key={idx}
                         option={option}
+                        handleCorrectAnswer={handleCorrectAnswer}
+                    // selectedAnswer={selectedAnswer}
                     ></OptionItem>)
                 }
             </div>
