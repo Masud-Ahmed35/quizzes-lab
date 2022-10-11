@@ -5,6 +5,7 @@ import Topics from "../components/Topics/Topics";
 import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Statistics from "../components/Statistics/Statistics";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: '/topics',
                 element: <Topics></Topics>
+            },
+            {
+                path: '/statistics',
+                element: <Statistics></Statistics>
             },
             {
                 path: '/blog',

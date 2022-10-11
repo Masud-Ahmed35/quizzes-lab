@@ -36,7 +36,7 @@ const Header = () => {
                         <li>
                             <NavLink
                                 to="/home"
-                                aria-label="Our product"
+                                aria-label="Home"
                                 className="font-bold tracking-wide text-amber-600 text-lg border-b-2 rounded-lg px-2"
                             >
                                 Home
@@ -44,11 +44,20 @@ const Header = () => {
                         </li>
                         <li>
                             <NavLink
-                                to="topics"
-                                aria-label="Our product"
+                                to="/topics"
+                                aria-label="Topics"
                                 className="font-bold tracking-wide text-amber-600 text-lg border-b-2 rounded-lg px-2"
                             >
                                 Topics
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/statistics"
+                                aria-label="Statistics"
+                                className="font-bold tracking-wide text-amber-600 text-lg border-b-2 rounded-lg px-2"
+                            >
+                                Statistics
                             </NavLink>
                         </li>
                         <li>
@@ -156,6 +165,15 @@ const Header = () => {
                                                     className="font-bold tracking-wide text-gray-700"
                                                 >
                                                     Topics
+                                                </NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink
+                                                    to="/statistics"
+                                                    aria-label="Statistics"
+                                                    className="font-bold tracking-wide text-gray-700"
+                                                >
+                                                    Statistics
                                                 </NavLink>
                                             </li>
                                             <li>

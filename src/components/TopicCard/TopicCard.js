@@ -6,7 +6,7 @@ const TopicCard = ({ topic }) => {
     return (
         <div className="p-6 rounded-md shadow-md bg-slate-200 lg:grid grid-cols-2">
             <div className=''>
-                <img src={logo} alt="" className="rounded-md border-2 border-purple-500" />
+                <img src={logo} alt="" className="rounded-md border-2 border-purple-500 hover:border-purple-800 hover:border-4" />
             </div>
             <div className="ml-5 lg:relative mt-7">
                 <h2 className="text-xl font-semibold tracking-wide lg:mb-3">Topic Name: <span className='text-stone-600'>{name}</span></h2>
