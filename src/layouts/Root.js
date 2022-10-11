@@ -4,6 +4,7 @@ import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 
 export const TopicContext = createContext({});
+export const QuestionContext = createContext({});
 
 const Root = () => {
     const data = useLoaderData();

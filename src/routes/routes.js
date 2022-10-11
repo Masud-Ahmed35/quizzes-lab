@@ -6,12 +6,13 @@ import Blog from "../components/Blog/Blog";
 import About from "../components/About/About";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Statistics from "../components/Statistics/Statistics";
+import Quizzes from "../components/Quizzes/Quizzes";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
-        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+        loader: async () => fetch('https://openapi.programming-hero.com/api/quiz'),
         errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
                 path: '/about',
                 element: <About></About>
             },
+            {
+                path: '/quiz/:quizId',
+                loader: async ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
+                element: <Quizzes></Quizzes>
+            }
         ]
     }
 ])
