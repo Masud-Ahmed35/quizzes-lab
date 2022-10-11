@@ -49,6 +49,7 @@ const Quiz = ({ quiz, index }) => {
                         key={idx}
                         option={option}
                         handleCorrectAnswer={handleCorrectAnswer}
+                        id={id}
                     // selectedAnswer={selectedAnswer}
                     ></OptionItem>)
                 }

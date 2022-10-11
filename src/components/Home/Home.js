@@ -24,7 +24,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='mt-16'>
-                <h1 className='text-3xl font-bold text-center mb-8 shadow-xl pb-5 rounded-xl'>Select Your Topic</h1>
+                <h1 className='text-3xl font-bold text-center mb-8 shadow-xl pb-5 rounded-xl'>Try Our Popular Topics</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[80%] mx-auto gap-7'>
                     {
                         topics.map(topic => <TopicCard

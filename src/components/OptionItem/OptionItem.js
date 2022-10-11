@@ -1,9 +1,11 @@
 import React from 'react';
 
-const OptionItem = ({ option, handleCorrectAnswer, selectedAnswer }) => {
+const OptionItem = ({ option, handleCorrectAnswer, selectedAnswer, id }) => {
     return (
-        <div className=''>
-            <button onClick={() => handleCorrectAnswer(option)} className={`w-full ${selectedAnswer ? 'bg-green-400' : 'bg-red-500'}`}><p className='border-2 py-3'>{option}</p></button>
+        <div>
+            <button onClick={() => handleCorrectAnswer(option)} className={`w-full`}>
+                <p className='border-2 py-3'><input type="radio" name={`radio-${id}`} className="radio radio-secondary w-4 h-4" /> {option}</p>
+            </button>
         </div>
     );
 };
