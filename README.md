@@ -10,5 +10,16 @@ This is an online based educational project, Where anyone can take an participat
 * You can take participate as much you want.
 * You can view your performance immediately.
 * You can see yor full ststistics.
+* Fully Responsive
+* User Friendly
 
-### Live Website Link: 
+### Live Website Link: https://quizzes-lab.netlify.app/
+
+### Api Link
+* Default Api: https://openapi.programming-hero.com/api/quiz
+* Api With Id: https://openapi.programming-hero.com/api/quiz/${Id}
+
+## Resources & Credits
+* React
+* Tailwind css
+* Tailwind Component
