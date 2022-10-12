@@ -1,11 +1,12 @@
 import { EyeIcon } from '@heroicons/react/24/solid';
-import React from 'react';
 import OptionItem from '../OptionItem/OptionItem';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Quiz = ({ quiz, index }) => {
+const Quiz = ({ quiz, index, setCount }) => {
+
+
     const { id, correctAnswer, question, options } = quiz;
     // console.log(quiz);
     const questionWithoutTag = question.replace(/(<([^>]+)>)/ig, '');
@@ -13,6 +14,7 @@ const Quiz = ({ quiz, index }) => {
     const handleCorrectAnswer = option => {
         if (option === correctAnswer) {
             toast.success('Your Answer is Correct', { autoClose: 1000 })
+            setCount(prev => prev + 1)
         }
         else {
             toast.error('Your Answer is Wrong', { autoClose: 1000 })
