@@ -3,7 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
 
 const Quizzes = () => {
-    const [count, setCount] = useState(0);
+    const [correct, setCorrect] = useState(0);
+    const [wrong, setWrong] = useState(0);
     const data = useLoaderData();
     const quizzes = data.data.questions
 
@@ -17,7 +18,8 @@ const Quizzes = () => {
                         key={quiz.id}
                         quiz={quiz}
                         index={index}
-                        setCount={setCount}
+                        setCorrect={setCorrect}
+                        setWrong={setWrong}
                     ></Quiz>)
                 }
             </div>
@@ -25,10 +27,11 @@ const Quizzes = () => {
                 <label htmlFor="my-modal-3" className="btn modal-button btn-outline btn-info w-full">See Your Result</label>
                 <input type="checkbox" id="my-modal-3" className="modal-toggle" />
                 <div className="modal">
-                    <div className="modal-box relative divide-y-4">
+                    <div className="modal-box relative">
                         <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                        <h3 className="text-2xl text-amber-600 font-bold text-center py-1">Congratulations!!!</h3>
-                        <p className="py-4 text-lg text-green-600 text-center font-semibold">Correct Answer is: <span className='text-xl'>{count}</span></p>
+                        <h3 className="text-2xl text-amber-600 font-bold text-center py-1 shadow-lg pb-1">Congratulations!!!</h3>
+                        <p className="pt-4 text-lg text-green-600 text-center font-semibold">Correct Answer is: <span className='text-xl'>{correct}</span></p>
+                        <p className="pt-4 text-lg text-red-600 text-center font-semibold">Wrong Answer is: <span className='text-xl'>{wrong}</span></p>
                     </div>
                 </div>
             </div>

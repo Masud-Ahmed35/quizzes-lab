@@ -4,20 +4,20 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Quiz = ({ quiz, index, setCount }) => {
-
+const Quiz = ({ quiz, index, setCorrect, setWrong, setCount }) => {
 
     const { id, correctAnswer, question, options } = quiz;
-    // console.log(quiz);
+
     const questionWithoutTag = question.replace(/(<([^>]+)>)/ig, '');
 
     const handleCorrectAnswer = option => {
         if (option === correctAnswer) {
             toast.success('Your Answer is Correct', { autoClose: 1000 })
-            setCount(prev => prev + 1)
+            setCorrect(prev => prev + 1)
         }
         else {
             toast.error('Your Answer is Wrong', { autoClose: 1000 })
+            setWrong(prev => prev + 1)
         }
     }
     return (
