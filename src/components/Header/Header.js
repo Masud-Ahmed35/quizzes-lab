@@ -28,7 +28,7 @@ const Header = () => {
                             <rect x="14" y="1" width="7" height="6" />
                             <rect x="14" y="11" width="7" height="12" />
                         </svg>
-                        <span className="ml-2 text-2xl font-extrabold tracking-wide text-amber-600 border-x-4 px-1 rounded-lg border-gray-500">
+                        <span className="ml-2 text-2xl italic font-extrabold tracking-wide text-amber-600 border-x-4 px-1 rounded-lg border-gray-500">
                             Quizzes Lab
                         </span>
                     </Link>
@@ -126,7 +126,7 @@ const Header = () => {
                                                     <rect x="14" y="1" width="7" height="6" />
                                                     <rect x="14" y="11" width="7" height="12" />
                                                 </svg>
-                                                <span className="ml-2 text-xl font-extrabold tracking-wide text-gray-800 border-x-4 px-1 rounded-lg border-amber-700">
+                                                <span className="ml-2 text-xl italic font-extrabold tracking-wide text-gray-800 border-x-4 px-1 rounded-lg border-amber-700">
                                                     Quizzes Lab
                                                 </span>
                                             </NavLink>

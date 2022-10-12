@@ -1,9 +1,8 @@
 import { EyeIcon } from '@heroicons/react/24/solid';
-import React, { useState } from 'react';
+import React from 'react';
 import OptionItem from '../OptionItem/OptionItem';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 const Quiz = ({ quiz, index }) => {
@@ -11,20 +10,14 @@ const Quiz = ({ quiz, index }) => {
     // console.log(quiz);
     const questionWithoutTag = question.replace(/(<([^>]+)>)/ig, '');
 
-    // const [selectedAnswer, setSelectedAnswer] = useState();
     const handleCorrectAnswer = option => {
         if (option === correctAnswer) {
-            // setSelectedAnswer(true);
-            console.log('Correct Answer');
             toast.success('Your Answer is Correct', { autoClose: 1000 })
         }
         else {
-            // setSelectedAnswer(false);
-            console.log('Wrong Answer');
             toast.error('Your Answer is Wrong', { autoClose: 1000 })
         }
     }
-
     return (
         <div className='m-10'>
             <div className=''>
@@ -50,7 +43,6 @@ const Quiz = ({ quiz, index }) => {
                         option={option}
                         handleCorrectAnswer={handleCorrectAnswer}
                         id={id}
-                    // selectedAnswer={selectedAnswer}
                     ></OptionItem>)
                 }
             </div>
