@@ -21,7 +21,7 @@ const Quiz = ({ quiz, index }) => {
     return (
         <div className='m-10'>
             <div className=''>
-                <h2 className='text-center text-lg font-bold mb-3'>Question: {index + 1} *{questionWithoutTag}</h2>
+                <h2 className='text-center text-lg font-bold mb-3'>Question: {index + 1} - {questionWithoutTag}</h2>
                 <div className='flex justify-center'>
                     <label title='Click On To See The Correct Answer' htmlFor={`my-modal-${id}`} className="mb-5"><EyeIcon className="h-6 w-6 text-blue-500"></EyeIcon></label>
                 </div>
